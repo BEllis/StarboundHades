@@ -1,0 +1,15 @@
+{
+  "assetDirectories" : [
+    "..\\assets\\",
+    "{CUR_PATH}\\mods\\",
+    "..\\mods\\"
+  ],
+
+  "storageDirectory" : "..\\storage\\",
+
+  "defaultConfiguration" : {
+    "gameServerBind" : "*",
+    "queryServerBind" : "*",
+    "rconServerBind" : "*"
+  }
+}

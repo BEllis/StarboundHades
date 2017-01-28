@@ -1,0 +1,24 @@
+{
+  "name": "Hades",
+  "version": "0.0.1",
+  "description": "A client for listing and connecting to starbound servers without having to manually adjust the mods the client is using.",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron ."
+  },
+  "keywords": [
+    "hades",
+    "starbound",
+    "mod",
+    "steam"
+  ],
+  "repository": "http://github.com/",
+  "author": "Ben Ellis <development@hades.rocks>",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "jsonfile": "^2.4.0"
+  }
+}

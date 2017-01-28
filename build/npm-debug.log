@@ -1,0 +1,45 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'dist' ]
+2 info using npm@3.6.0
+3 info using node@v5.6.0
+4 verbose run-script [ 'predist', 'dist', 'postdist' ]
+5 info lifecycle hadesclientdev@0.0.1~predist: hadesclientdev@0.0.1
+6 silly lifecycle hadesclientdev@0.0.1~predist: no script for predist, continuing
+7 info lifecycle hadesclientdev@0.0.1~dist: hadesclientdev@0.0.1
+8 verbose lifecycle hadesclientdev@0.0.1~dist: unsafe-perm in lifecycle true
+9 verbose lifecycle hadesclientdev@0.0.1~dist: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/ben.ellis/dev/starbound-dev/hades-client-3/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+10 verbose lifecycle hadesclientdev@0.0.1~dist: CWD: /Users/ben.ellis/dev/starbound-dev/hades-client-3
+11 silly lifecycle hadesclientdev@0.0.1~dist: Args: [ '-c', 'build -w && build -l && build -m' ]
+12 silly lifecycle hadesclientdev@0.0.1~dist: Returned: code: 255  signal: null
+13 info lifecycle hadesclientdev@0.0.1~dist: Failed to exec dist script
+14 verbose stack Error: hadesclientdev@0.0.1 dist: `build -w && build -l && build -m`
+14 verbose stack Exit status 255
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:232:16)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at EventEmitter.emit (events.js:185:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:100:13)
+14 verbose stack     at ChildProcess.emit (events.js:185:7)
+14 verbose stack     at maybeClose (internal/child_process.js:827:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid hadesclientdev@0.0.1
+16 verbose cwd /Users/ben.ellis/dev/starbound-dev/hades-client-3/build
+17 error Darwin 14.5.0
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "dist"
+19 error node v5.6.0
+20 error npm  v3.6.0
+21 error code ELIFECYCLE
+22 error hadesclientdev@0.0.1 dist: `build -w && build -l && build -m`
+22 error Exit status 255
+23 error Failed at the hadesclientdev@0.0.1 dist script 'build -w && build -l && build -m'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the hadesclientdev package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     build -w && build -l && build -m
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs hadesclientdev
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls hadesclientdev
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

@@ -1,0 +1,32 @@
+{
+  "name": "hadesclientdev",
+  "version": "0.0.1",
+  "description": "Development environment for building hades client.",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron ./app --enable-logging",
+    "dev": "NODE_ENV='development' npm run start",
+    "clean": "rm -rf ./dist",
+    "dist": "CSC_IDENTITY_AUTO_DISCOVERY=false && build -w && build -m",
+    "postinstall": "install-app-deps"
+  },
+  "author": "Ben Ellis <development@hades.rocks>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-builder": "^11.5.1",
+    "electron-packager": "^8.5.0",
+    "electron-prebuilt": "^1.4.13"
+  },
+  "build": {
+    "appId": "rocks.hades.client",
+    "mac": {
+      "category": "public.app-category.gaming"
+    },
+    "win": {
+      "iconUrl": "http://www.iconarchive.com/download/i90162/icons8/windows-8/Cinema-Doctor-Fate-Helmet.ico"
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
