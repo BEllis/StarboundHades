@@ -60,3 +60,5 @@ dist
 *.js.map
 
 typings
+
+config.json
