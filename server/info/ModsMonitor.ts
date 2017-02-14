@@ -1,7 +1,7 @@
 import * as Rx from "rx";
 import * as fs from "fs";
-import * as XRegExp from "xregexp";
 import * as crypto from "crypto";
+import * as XRegExp from "xregexp";
 import { LogMonitor } from "./LogMOnitor";
 import { SBAsset6 } from "./SBAsset6";
 
@@ -106,7 +106,7 @@ class ModsLogParser {
                 }
 
                 let hash = sha256sum.digest('hex');
-                metadata.pakUrl = me.serverBaseUrl + 'mod/' + hash + ".pak";
+                metadata.pakUrl = me.serverBaseUrl + 'mods/' + hash + ".pak";
                 metadata.pakSha256 = hash;
                 metadata.localPakFilePath = assetPakPath;
                 me.modsMap[assetPakPath] = metadata;

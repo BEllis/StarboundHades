@@ -78,8 +78,8 @@ export class ServerInfoMonitor {
                         "registrationUrl": me.serverUserRegistrationUrl,
                         "email": me.contactEmail,
                         "description": me.serverDescription,
-                        "infoUrl": me.serverBaseUrl + "/",
-                        "statusUrl": me.serverBaseUrl + "/status",
+                        "infoUrl": me.serverBaseUrl + "info",
+                        "statusUrl": me.serverBaseUrl + "status",
                         "mods": mods
                     };
 

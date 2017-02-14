@@ -97,7 +97,7 @@ function modFileRequestHandler(req, res) {
             
             let readStream = fs.createReadStream(assetFilePath);
             readStream.on('open', function () {
-                res.setHeader("Content-Type", "application/binary");
+                // res.setHeader("Content-Type", "application/binary");
                 readStream.pipe(res);
             });
 

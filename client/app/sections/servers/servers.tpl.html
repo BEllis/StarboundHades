@@ -1,0 +1,78 @@
+<style>
+ .form-group {
+   margin-bottom: 0px;
+ }
+
+ .form-control-static {
+   font-size: 12px;
+   min-height: 1px;
+   padding-bottom: 0px;
+ }
+
+ .container {
+    padding: 15px;
+ }
+
+</style>
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <div class="container" ng-show="numberOfServers() == 0">
+      Fetching server list...
+    </div>
+    <div class="table-responsive"  ng-show="numberOfServers() > 0">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Server Name</th>
+            <th style="text-align: center">Mods</th>
+            <th style="text-align: center">Players</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="server in servers" ng-click="selectServer(server)">
+            <td style="white-space: nowrap;overflow: hidden;">{{server.name}}</td>
+            <td style="text-align: center"><span class="label label-info">{{server.mods.length}}</span></td>
+            <td style="text-align: center"><span class="label label-success">{{server.playerCount}} / {{server.maxPlayers}}</span></td>
+            <td><button id="connect" class="btn btn-primary btn-xs" ng-click="connect(server)" data-toggle="modal" data-target="#connectingModal">Connect</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <h2>Server Information</h2>
+    <div class="container" ng-show="selectedServer == null">
+      Select a server from the list.
+    </div>
+    <form class="form-horizontal"  ng-show="selectedServer != null">
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Server address</label>
+        <div class="col-sm-8">
+          <p class="form-control-static">{{selectedServer.address}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Server name</label>
+        <div class="col-sm-8">
+          <p class="form-control-static">{{selectedServer.name}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Server status</label>
+        <div class="col-sm-8">
+          <p class="form-control-static"><span class="label" ng-class="{'label-danger': selectedServer.status.status != 'active', 'label-info': selectedServer.status.status == 'active'}">{{selectedServer.status.status}}</span></p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Players</label>
+        <div class="col-sm-8">
+          <div class="form-control-static" ng-repeat="player in selectedServer.status.players">{{player.name}}</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button id="connect" class="btn btn-primary btn-xs" ng-click="connect(selectedServer)" data-toggle="modal" data-target="#connectingModal">Connect</button>
+      </div>
+    </form>
+  </div>
+</div>

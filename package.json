@@ -4,7 +4,7 @@
   "description": "Development environment for building hades client.",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/electron ./app --enable-logging",
+    "start": "./node_modules/.bin/electron ./client --enable-logging",
     "dev": "NODE_ENV='development' npm run start",
     "clean": "rm -rf ./dist",
     "dist": "CSC_IDENTITY_AUTO_DISCOVERY=false && build -w && build -m",
