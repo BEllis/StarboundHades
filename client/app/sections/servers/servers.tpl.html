@@ -16,6 +16,10 @@
 </style>
 <div class="row">
   <div class="col-xs-12 col-md-6">
+    <button type="button" class="btn btn-sm btn-primary" ng-click="refreshServerList()">Refresh</button>
+    <div class="container" ng-show="numberOfServers() < 0">
+      Failed to fetch server list, click Refresh to try again.
+    </div>
     <div class="container" ng-show="numberOfServers() == 0">
       Fetching server list...
     </div>

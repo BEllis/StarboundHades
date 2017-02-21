@@ -5,18 +5,11 @@ import * as bodyParser from "body-parser";
 import * as router from "./router";
 import * as locale from "./locale";
 
-// Debug segmentation problems.
-var SegfaultHandler = require('segfault-handler');
-SegfaultHandler.registerHandler("crash.log");
-
 declare var global: any;
 
 var FileAPI = require('file-api')
 var FileReader = FileAPI.FileReader;
 global.FileReaderSync = FileReader;
-
-import { Worker } from "webworker-threads";
-global.Worker = Worker;
 
 // import errorHandler = require("errorhandler");
 //import methodOverride = require("method-override");

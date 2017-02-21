@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV='development' node --harmony-proxies server.js",
-    "start": "NODE_ENV='production' node --harmony-proxies server.js"
+    "dev": "NODE_ENV='development' nodejs --harmony-array-includes --harmony-proxies server.js",
+    "start": "NODE_ENV='production' nodejs --harmony-array-includes --harmony-proxies server.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +19,6 @@
     "int64-buffer": "^0.1.9",
     "promise": "^7.1.1",
     "rx": "^4.1.0",
-    "segfault-handler": "^1.0.0",
     "starbound-assets": "^0.9.0",
     "starbound-files": "^0.8.0",
     "typedarray-to-buffer": "^3.1.2",

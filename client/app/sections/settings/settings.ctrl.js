@@ -2,9 +2,14 @@
 
 angular
     .module('app.core')
-    .controller('SettingsController', function($scope) {
+    .controller('SettingsController', function($scope, configService) {
 
-        // Setup view model object
-        var vm = this;
+        $scope.config = configService.loadConfigFile();
+        $scope.save = function() {
+            configService.saveConfigFile($scope.config);
+        };
+        $scope.undo = function() {
+            $scope.config = configService.loadConfigFile();
+        }
 
     });

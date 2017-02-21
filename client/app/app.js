@@ -14,6 +14,9 @@ require('./sections/servers/servers.ctrl.js');
 require('./sections/settings/settings.ctrl.js');
 
 /* Services */
-require('./services/starbound.svc.js');
+require('./services/starbound.info.svc.js');
+require('./services/starbound.control.svc.js');
+require('./services/config.svc.js');
+require('./services/notifications.svc.js');
 
 var app = angular.module('hades', ['ngRoute', 'app.core', 'app.routes', 'app.services']);
