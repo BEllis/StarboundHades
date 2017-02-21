@@ -94,10 +94,14 @@ To add a listing server, make a git pull request to add your server to the maste
 
 *Note: We typically only approve requests for servers listing 5 or more servers that they host themselves, if you have less than 5 servers we suggest registering the servers with an existing listing server.*
 
-##Roadmap
+##Release Notes
+###V1.0.0
 
 1. Allow updating of mods to match server mods.
 2. Provide public server listings.
+
+##Roadmap
+
 3. Allow ability to add private servers.
 4. Lock characters to servers (must create new character when joining a server for the first time).
 5. Cloud backup Starbound characters.
