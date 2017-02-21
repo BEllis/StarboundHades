@@ -1,6 +1,6 @@
 {
   "name": "hades-server",
-  "version": "1.0.0",
+  "version": "1.0.0a",
   "description": "A server for publishing information about the local starbound server.",
   "main": "server.js",
   "scripts": {

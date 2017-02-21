@@ -1,6 +1,6 @@
 {
   "name": "hades",
-  "version": "1.0.0",
+  "version": "1.0.0a",
   "description": "A client for listing and connecting to starbound servers without having to manually adjust the mods the client is using.",
   "homepage": "http://starbound.hades.rocks/",
   "main": "index.js",

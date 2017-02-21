@@ -1,6 +1,6 @@
 {
   "name": "hadesclientdev",
-  "version": "1.0.0",
+  "version": "1.0.0a",
   "description": "Development environment for building hades client and server.",
   "homepage": "http://starbound.hades.rocks/",
   "main": "index.js",
