@@ -44,12 +44,12 @@ For each mod (if any),
   "protocol": "729",
   "players": [
     {
-      name: 'DragonWolf',
-      registered: true
+      "name": "DragonWolf",
+      "registered": true
     },
     {
-      name: 'Skubs',
-      registered: false
+      "name": "Skubs",
+      "registered": false
     }    
   ]
 }
