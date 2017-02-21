@@ -26,10 +26,12 @@ angular
               var me = this;
                 if (os.platform() == 'win32') {
                     starboundPath = path.resolve(path.normalize('C:\\program files (x86)\\steam\\steamapps\\common\\Starbound'));
-                } else if (os.type() == 'Darwin') {
+                } else if (os.platform() == 'darwin') {
                     starboundPath = path.resolve(path.normalize(path.join(process.env['HOME'], '/Library/Application\ Support/Steam/steamapps/common/Starbound')));
+                } else if (os.platform() == 'linux') {
+                    starboundPath = path.resolve(path.normalize(path.join(process.env['HOME'], '/.steam/steam/SteamApps/common/Starbound')));
                 } else {
-                    throw os.type() + ' not currently supported.'
+                    throw os.platform() + ' not currently supported.'
                 }
 
                 configFileData = {
@@ -76,7 +78,7 @@ angular
             let modsPath = path.join(userDataPath, 'mods');
 
             let starboundStoragePath = path.resolve(starboundPath, 'storage');
-            let starboundConfigFilePath = path.join(storagePath, 'starbound.config');
+            let starboundConfigFilePath = path.join(starboundStoragePath, 'starbound.config');
 
             let starboundExecutable;
             let clientConfigTemplateFilePath;
@@ -85,12 +87,14 @@ angular
             if (os.platform() == 'win32') {
                 starboundExecutable = path.join(starboundPath, 'win32\\starbound.exe');
                 clientConfigTemplateFilePath = path.join(appPath, 'templates\\client.config.win32.template');  
-            } else if (os.type() == 'Darwin') {
-                starboundExecutable = path.join(starboundPath, 'Starbound/osx/Starbound.app/Contents/MacOS/starbound');
+            } else if (os.platform() == 'darwin') {
+                starboundExecutable = path.join(starboundPath, 'osx/Starbound.app/Contents/MacOS/starbound');
                 clientConfigTemplateFilePath = path.join(appPath, 'templates/client.config.darwin.template');
-                modsPath = path.join(userDataPath, 'mods');
+            } else if (os.platform() == 'linux') {
+                starboundExecutable = path.join(starboundPath, 'linux/starbound');
+                clientConfigTemplateFilePath = path.join(appPath, 'templates/client.config.darwin.template');
             } else {
-                throw os.type() + ' not currently supported.'
+                throw os.platform() + ' not currently supported.'
             }
 
             if (!fs.existsSync(starboundExecutable)) {
@@ -105,7 +109,6 @@ angular
                 starboundExecutable: starboundExecutable,
                 clientConfigFilePath: clientConfigFilePath,
                 clientConfigTemplateFilePath: clientConfigTemplateFilePath,
-                storageDirectoryPath: storageDirectoryPath,
                 starboundConfigFilePath: starboundConfigFilePath,
                 modsPath: modsPath
             };

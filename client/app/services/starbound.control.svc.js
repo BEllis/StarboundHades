@@ -6,6 +6,8 @@ angular
         var jsonfile = require('jsonfile');
         var execFile = require('child_process').execFile;
 
+        let filename = 'mod.pak';
+
         return {
           updateClientConfig: function(platformConfig, server) {
             var clientConfig = jsonfile.readFileSync(platformConfig.clientConfigTemplateFilePath);
@@ -24,8 +26,8 @@ angular
             jsonfile.writeFileSync(platformConfig.clientConfigFilePath, clientConfig);
 
             /*
-            if (!fs.existsSync(platformConfig.storageDirectoryPath)) {
-                fs.mkdirSync(platformConfig.storageDirectoryPath);
+            if (!fs.existsSync(platformConfig.userStoragePath)) {
+                fs.mkdirSync(platformConfig.userDirectoryPath);
             } */
           },
 

@@ -1,7 +1,8 @@
 {
-  "name": "Hades",
-  "version": "0.0.1",
+  "name": "hades",
+  "version": "1.0.0",
   "description": "A client for listing and connecting to starbound servers without having to manually adjust the mods the client is using.",
+  "homepage": "http://starbound.hades.rocks/",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/electron ."
@@ -22,5 +23,19 @@
     "jquery": "^3.1.1",
     "jsonfile": "^2.4.0",
     "rx": "^4.1.0"
+  },
+  "build": {
+    "appId": "rocks.hades.client",
+    "mac": {
+      "category": "public.app-category.gaming"
+    },
+    "win": {
+      "iconUrl": "http://www.iconarchive.com/download/i90162/icons8/windows-8/Cinema-Doctor-Fate-Helmet.ico"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^11.5.1",
+    "electron-packager": "^8.5.0",
+    "electron-prebuilt": "^1.4.13"
   }
 }
